@@ -30,7 +30,7 @@
 ```
 ## 使用方法:
 ### 1.GET请求
-```objc
+```swift
 
         //MARK: - GET请求
         XHNetwork.shareNetwork.GET(URL_TEST, parameters: nil, success: { (response) in
@@ -44,7 +44,7 @@
 
 ```
 ### 2.POST请求
-```objc
+```swift
 
         //MARK: - POST请求
         let dic = ["name":"zhang","phone":"10010"]
