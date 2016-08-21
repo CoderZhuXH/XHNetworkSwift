@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B2F7EAB1D69928A00BD070E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F7EAA1D69928A00BD070E /* AppDelegate.swift */; };
+		4B2F7EAD1D69928A00BD070E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F7EAC1D69928A00BD070E /* ViewController.swift */; };
+		4B2F7EB21D69928A00BD070E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2F7EB11D69928A00BD070E /* Assets.xcassets */; };
+		4B2F7EB51D69928A00BD070E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B2F7EB31D69928A00BD070E /* LaunchScreen.storyboard */; };
+		4B2F7EBE1D69934500BD070E /* XHNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2F7EBD1D69934500BD070E /* XHNetwork.swift */; };
+		4B56B9571D69A57C00BB43B8 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B56B9561D69A57C00BB43B8 /* ViewController.xib */; };
+		DEA76C94DDAC80B813A27DFE /* Pods_XHNetworkSwiftExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81759C250E430BF30DB03B34 /* Pods_XHNetworkSwiftExample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		09CE44AEF785F1E7B97E367D /* Pods-XHNetworkSwiftExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XHNetworkSwiftExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-XHNetworkSwiftExample/Pods-XHNetworkSwiftExample.release.xcconfig"; sourceTree = "<group>"; };
+		0D7A8F1787090DE017F02A96 /* Pods-XHNetworkSwiftExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XHNetworkSwiftExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XHNetworkSwiftExample/Pods-XHNetworkSwiftExample.debug.xcconfig"; sourceTree = "<group>"; };
+		4B2F7EA71D69928A00BD070E /* XHNetworkSwiftExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHNetworkSwiftExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2F7EAA1D69928A00BD070E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4B2F7EAC1D69928A00BD070E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B2F7EB11D69928A00BD070E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4B2F7EB41D69928A00BD070E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4B2F7EB61D69928A00BD070E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B2F7EBD1D69934500BD070E /* XHNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHNetwork.swift; sourceTree = "<group>"; };
+		4B56B9561D69A57C00BB43B8 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		81759C250E430BF30DB03B34 /* Pods_XHNetworkSwiftExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XHNetworkSwiftExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4B2F7EA41D69928A00BD070E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA76C94DDAC80B813A27DFE /* Pods_XHNetworkSwiftExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B2F7E9E1D69928A00BD070E = {
+			isa = PBXGroup;
+			children = (
+				4B2F7EA91D69928A00BD070E /* XHNetworkSwiftExample */,
+				4B2F7EBC1D6992C700BD070E /* XHNetworkSwift */,
+				4B2F7EA81D69928A00BD070E /* Products */,
+				E3AE71AD27CB62A5A752CB4E /* Pods */,
+				A5E7F5EE56D9B212C1E60355 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4B2F7EA81D69928A00BD070E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4B2F7EA71D69928A00BD070E /* XHNetworkSwiftExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4B2F7EA91D69928A00BD070E /* XHNetworkSwiftExample */ = {
+			isa = PBXGroup;
+			children = (
+				4B2F7EAA1D69928A00BD070E /* AppDelegate.swift */,
+				4B2F7EAC1D69928A00BD070E /* ViewController.swift */,
+				4B56B9561D69A57C00BB43B8 /* ViewController.xib */,
+				4B2F7EB11D69928A00BD070E /* Assets.xcassets */,
+				4B2F7EB31D69928A00BD070E /* LaunchScreen.storyboard */,
+				4B2F7EB61D69928A00BD070E /* Info.plist */,
+			);
+			path = XHNetworkSwiftExample;
+			sourceTree = "<group>";
+		};
+		4B2F7EBC1D6992C700BD070E /* XHNetworkSwift */ = {
+			isa = PBXGroup;
+			children = (
+				4B2F7EBD1D69934500BD070E /* XHNetwork.swift */,
+			);
+			path = XHNetworkSwift;
+			sourceTree = "<group>";
+		};
+		A5E7F5EE56D9B212C1E60355 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81759C250E430BF30DB03B34 /* Pods_XHNetworkSwiftExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3AE71AD27CB62A5A752CB4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D7A8F1787090DE017F02A96 /* Pods-XHNetworkSwiftExample.debug.xcconfig */,
+				09CE44AEF785F1E7B97E367D /* Pods-XHNetworkSwiftExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4B2F7EA61D69928A00BD070E /* XHNetworkSwiftExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B2F7EB91D69928A00BD070E /* Build configuration list for PBXNativeTarget "XHNetworkSwiftExample" */;
+			buildPhases = (
+				A4F72D1023615385AACF8EA0 /* [CP] Check Pods Manifest.lock */,
+				4B2F7EA31D69928A00BD070E /* Sources */,
+				4B2F7EA41D69928A00BD070E /* Frameworks */,
+				4B2F7EA51D69928A00BD070E /* Resources */,
+				34D41BAE1EFA12B28BC9B0D8 /* [CP] Embed Pods Frameworks */,
+				4B47C915F66F6C58D08378D3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XHNetworkSwiftExample;
+			productName = XHNetworkSwiftExample;
+			productReference = 4B2F7EA71D69928A00BD070E /* XHNetworkSwiftExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4B2F7E9F1D69928A00BD070E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = returnoc.com;
+				TargetAttributes = {
+					4B2F7EA61D69928A00BD070E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 4B2F7EA21D69928A00BD070E /* Build configuration list for PBXProject "XHNetworkSwiftExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4B2F7E9E1D69928A00BD070E;
+			productRefGroup = 4B2F7EA81D69928A00BD070E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4B2F7EA61D69928A00BD070E /* XHNetworkSwiftExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4B2F7EA51D69928A00BD070E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2F7EB51D69928A00BD070E /* LaunchScreen.storyboard in Resources */,
+				4B56B9571D69A57C00BB43B8 /* ViewController.xib in Resources */,
+				4B2F7EB21D69928A00BD070E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34D41BAE1EFA12B28BC9B0D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XHNetworkSwiftExample/Pods-XHNetworkSwiftExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B47C915F66F6C58D08378D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XHNetworkSwiftExample/Pods-XHNetworkSwiftExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4F72D1023615385AACF8EA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4B2F7EA31D69928A00BD070E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2F7EBE1D69934500BD070E /* XHNetwork.swift in Sources */,
+				4B2F7EAD1D69928A00BD070E /* ViewController.swift in Sources */,
+				4B2F7EAB1D69928A00BD070E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4B2F7EB31D69928A00BD070E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B2F7EB41D69928A00BD070E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4B2F7EB71D69928A00BD070E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4B2F7EB81D69928A00BD070E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4B2F7EBA1D69928A00BD070E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D7A8F1787090DE017F02A96 /* Pods-XHNetworkSwiftExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XHNetworkSwiftExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = returnoc.com.XHNetworkSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
+			};
+			name = Debug;
+		};
+		4B2F7EBB1D69928A00BD070E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09CE44AEF785F1E7B97E367D /* Pods-XHNetworkSwiftExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XHNetworkSwiftExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = returnoc.com.XHNetworkSwiftExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4B2F7EA21D69928A00BD070E /* Build configuration list for PBXProject "XHNetworkSwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B2F7EB71D69928A00BD070E /* Debug */,
+				4B2F7EB81D69928A00BD070E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B2F7EB91D69928A00BD070E /* Build configuration list for PBXNativeTarget "XHNetworkSwiftExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B2F7EBA1D69928A00BD070E /* Debug */,
+				4B2F7EBB1D69928A00BD070E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4B2F7E9F1D69928A00BD070E /* Project object */;
+}
