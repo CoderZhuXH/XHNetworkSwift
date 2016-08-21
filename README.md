@@ -67,3 +67,5 @@
 
 ##  许可证
     XHNetworkSwift 使用 MIT 许可证，详情见 LICENSE 文件
+##  详情见:
+#### http://www.jianshu.com/p/f8643477e690
