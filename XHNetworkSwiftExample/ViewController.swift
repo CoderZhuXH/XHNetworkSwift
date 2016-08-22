@@ -12,6 +12,10 @@ let SERVE = "http://aotuyuan.qinto.com/wl/Api.php/"
 //测试URL
 let URL_TEST = SERVE + "Api/indexInformation"
 
+//下载URL
+let URL_DOWN = "http://120.25.226.186:32812/resources/videos/minion_01.mp4"
+
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var textLab: UILabel!
@@ -43,6 +47,27 @@ class ViewController: UIViewController {
                 debugPrint(error)
         }
         
+        //MARK: - 下载
+        XHNetwork.shareNetwork.download1(URL_DOWN, downloadProgress: { (bytesRead, totalBytesRead, totalBytesExpectedToRead) in
+            
+             debugPrint("单次下载大小:\(bytesRead)___一共下载大小:\(totalBytesRead)___总大小:\(totalBytesExpectedToRead)")
+            
+            }, success: { (response) in
+               
+                debugPrint(response)
+                
+            }) { (error) in
+                
+                debugPrint(error)
+        }
+        
+        //            let fileManager = NSFileManager.defaultManager()
+        //            let directoryURL = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        //            let pathComponent = response.suggestedFilename
+        //
+        //            let pathURL = directoryURL.URLByAppendingPathComponent(pathComponent!)
+        //
+        //            print(pathURL)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
