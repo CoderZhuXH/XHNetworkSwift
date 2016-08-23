@@ -14,12 +14,12 @@ class XHNetwork: NSObject {
     /**
      *  网络请求成功闭包:
      */
-    typealias NetworkSuccess = (response:AnyObject) -> ()
+    typealias XHNetworkSuccess = (response:AnyObject) -> ()
     
     /**
      *  网络请求失败闭包:
      */
-    typealias NetworkFailure = (error:NSError) -> ()
+    typealias XHNetworkFailure = (error:NSError) -> ()
     
     /**
      *  上传进度闭包:(回调:1.单次上传大小 2.已经上传大小,3.文件总大小)
@@ -49,7 +49,7 @@ extension XHNetwork
      - parameter success:    成功回调
      - parameter failure:    失败回调
      */
-    func GET(urlString: String ,parameters: [String : AnyObject]? ,success: NetworkSuccess, failure: NetworkFailure){
+     func GET(urlString: String ,parameters: [String : AnyObject]? ,success: XHNetworkSuccess, failure: XHNetworkFailure){
         
         /*
          responseJSON:申明返回JSON类型数据
@@ -90,7 +90,7 @@ extension XHNetwork
      - parameter success:    成功回调
      - parameter failure:    失败回调
      */
-    func POST(urlString: String ,parameters: [String : AnyObject]? ,success: NetworkSuccess, failure: NetworkFailure) {
+    func POST(urlString: String ,parameters: [String : AnyObject]? ,success: XHNetworkSuccess, failure: XHNetworkFailure) {
         
         Alamofire.request(.POST, urlString, parameters: parameters).responseJSON { response in
             
@@ -119,12 +119,12 @@ extension XHNetwork
      文件上传
      
      - parameter urlString:      URL
-     - parameter fileURL:        要上传文件路径URL
+     - parameter fileURL:        要上传文件路径URL(包含文件名)
      - parameter uploadProgress: 上传进度回调(子线程)
      - parameter success:        成功回调
      - parameter failure:        失败回调
      */
-    func upload(urlString: String ,fileURL:NSURL ,uploadProgress:UploadProgress, success: NetworkSuccess, failure: NetworkFailure){
+    func upload(urlString: String ,fileURL:NSURL ,uploadProgress:UploadProgress, success: XHNetworkSuccess, failure: XHNetworkFailure){
         
         Alamofire.upload(.POST,urlString, file: fileURL)
             .progress { bytesWritten, totalBytesWritten, totalBytesExpectedToWrite in
@@ -139,10 +139,7 @@ extension XHNetwork
                  *  子线程回调上传进度
                  */
                 uploadProgress(bytesWritten:bytesWritten,totalBytesWritten:totalBytesWritten,totalBytesExpectedToWrite:totalBytesExpectedToWrite)
-                
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    print("Total bytes written on main queue: \(totalBytesWritten)")
-//                }
+
             }
             .validate()
             .responseJSON { response in
@@ -170,19 +167,20 @@ extension XHNetwork
     }
 
     /**
-     文件下载(自定义存储路径)
+     文件下载
      
      - parameter urlString: 下载URL
      - parameter downloadProgress: 下载进度回调(子线程)
-     - parameter fileSavePathURL: 文件存储路径URL
+     - parameter fileSavePathURL: 文件存储路径URL(不含文件名)
      - parameter success:   成功回调
      - parameter failure:   失败回调
      */
-    func download0(urlString: String ,savePathURL:NSURL ,downloadProgress: DownloadProgress, success: NetworkSuccess, failure: NetworkFailure){
+    func download(urlString: String ,savePathURL:NSURL ,downloadProgress: DownloadProgress, success: XHNetworkSuccess, failure: XHNetworkFailure){
         
         Alamofire.download(.GET, urlString) { temporaryURL, response in
             
-            return savePathURL
+            let pathComponent = response.suggestedFilename//建议文件名
+            return  savePathURL.URLByAppendingPathComponent(pathComponent!)
             
             }.progress { bytesRead, totalBytesRead, totalBytesExpectedToRead  in
                 print(totalBytesRead)
@@ -219,54 +217,4 @@ extension XHNetwork
         }
     }
     
-    /**
-     文件下载(默认存储路径)
-     
-     - parameter urlString:        URL
-     - parameter downloadProgress: 下载进度回调(子线程)
-     - parameter success:          成功回调
-     - parameter failure:          失败回调
-     */
-    func download1(urlString: String ,downloadProgress: DownloadProgress,success: NetworkSuccess, failure: NetworkFailure){
-        
-        let destination = Alamofire.Request.suggestedDownloadDestination(directory: .DocumentDirectory, domain: .UserDomainMask)
-        
-        let savePathURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        
-        Alamofire.download(.GET, urlString, destination: destination)
-            .progress { bytesRead, totalBytesRead, totalBytesExpectedToRead in
-                
-                /*
-                 bytesRead 单次下载大小
-                 totalBytesRead  已经下载大小
-                 totalBytesExpectedToRead 文件总大小
-                 */
-                
-                /**
-                 *  子线程回调下载进度
-                 */
-                downloadProgress(bytesRead:bytesRead,totalBytesRead:totalBytesRead,totalBytesExpectedToRead:totalBytesExpectedToRead)
-
-            }
-            .response { _, _, _, error in
-                if let error = error {
-                    
-                    /**
-                     *  失败
-                     */
-                    failure(error:error)
-                    debugPrint("Failed with error: \(error)")
-                    
-                } else {
-                    
-                    /**
-                     *  成功
-                     */
-                    success(response: savePathURL.absoluteString)
-                    
-                }
-        }
-    }
-
-
 }

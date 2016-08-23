@@ -9,10 +9,10 @@
 import UIKit
 
 let SERVE = "http://aotuyuan.qinto.com/wl/Api.php/"
-//测试URL
+//GET,POST测试URL
 let URL_TEST = SERVE + "Api/indexInformation"
 
-//下载URL
+//下载测试URL
 let URL_DOWN = "http://120.25.226.186:32812/resources/videos/minion_01.mp4"
 
 
@@ -47,31 +47,75 @@ class ViewController: UIViewController {
                 debugPrint(error)
         }
         
+        
         //MARK: - 下载
-        XHNetwork.shareNetwork.download1(URL_DOWN, downloadProgress: { (bytesRead, totalBytesRead, totalBytesExpectedToRead) in
-            
-             debugPrint("单次下载大小:\(bytesRead)___一共下载大小:\(totalBytesRead)___总大小:\(totalBytesExpectedToRead)")
-            
+       let savePathURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+        XHNetwork.shareNetwork.download(URL_DOWN, savePathURL: savePathURL
+            , downloadProgress: { (bytesRead, totalBytesRead, totalBytesExpectedToRead) in
+                
+                /**
+                 *  子线程回调下载进度
+                 */
+                debugPrint("单次下载大小:\(bytesRead)___一共下载大小:\(totalBytesRead)___总大小:\(totalBytesExpectedToRead)")
+                
+                /**
+                 *  如需进行UI处理,请到主线程操作
+                 */
+                
+                /*
+                dispatch_async(dispatch_get_main_queue()) {
+                
+                                //处理UI
+                }
+                */
+                
             }, success: { (response) in
                
-                debugPrint(response)
+                 debugPrint(response)
                 
             }) { (error) in
                 
-                debugPrint(error)
+                 debugPrint(error)
         }
-        
-        //            let fileManager = NSFileManager.defaultManager()
-        //            let directoryURL = fileManager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
-        //            let pathComponent = response.suggestedFilename
-        //
-        //            let pathURL = directoryURL.URLByAppendingPathComponent(pathComponent!)
-        //
-        //            print(pathURL)
-        
+
+/*
+        //MARK : - 文件上传
+
+        XHNetwork.shareNetwork.upload(传上传URLString, fileURL: 传文件完整路径URL, uploadProgress: { (bytesWritten, totalBytesWritten, totalBytesExpectedToWrite) in
+            
+            /**
+             *  子线程回调上传进度
+             */
+            debugPrint("单次上传大小:\(bytesWritten)___一共上传大小:\(totalBytesWritten)___总大小:\(totalBytesExpectedToWrite)")
+            
+            /**
+             *  如需进行UI处理,请到主线程操作
+             */
+            
+            /*
+             dispatch_async(dispatch_get_main_queue()) {
+             
+             //处理UI
+             }
+             */
+            
+            }, success: { (response) in
+                
+                 debugPrint(response)
+                
+            }) { (error) in
+                
+                 debugPrint(error)
+        }
+         
+         
+*/
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+ 
+
+ 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
