@@ -172,5 +172,6 @@
 
 ##  许可证
     XHNetworkSwift 使用 MIT 许可证，详情见 LICENSE 文件
-##  详细介绍:
-#### http://www.jianshu.com/p/f8643477e690
+##  传送门:
+[Swift网络编程(一)数据请求](http://www.jianshu.com/p/f8643477e690)
+[Swift网络编程(二)文件上传/下载](http://www.jianshu.com/p/13e2dbc07481)
